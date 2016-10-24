@@ -8,7 +8,65 @@ def main():
 
   # precalc_subsets()
 
-  precalc_downsample()
+  # precalc_downsample()
+
+  clean_measurements()
+
+def clean_measurements():
+  from clustergrammer import Network
+  from copy import deepcopy
+  import pandas as pd
+
+  types = ['Plasma', 'PMA']
+
+  for inst_treatment in types:
+    print(inst_treatment)
+
+    net = deepcopy(Network())
+    net.load_file('cytof_data/'+inst_treatment+'.txt')
+    tmp_df = net.dat_to_df()
+    df = tmp_df['mat']
+
+    print(df.shape)
+
+    # only keep relevent measurements
+    keep_cols, antibody_info = load_keep_antibodies()
+
+    df_keep = df[keep_cols]
+
+    # add col categories
+    col_cats = []
+    cols = df_keep.columns.tolist()
+    for inst_col in cols:
+
+      if inst_col in antibody_info['surface_markers']:
+        inst_type = 'Marker-type: surface marker'
+      else:
+        inst_type = 'Marker-type: phospho marker'
+
+      inst_name = 'Antibody: ' + inst_col
+      inst_tuple = (inst_name, inst_type)
+
+      col_cats.append(inst_tuple)
+
+    df_keep.columns = col_cats
+
+    # add categories to cells
+    rows = df_keep.index.tolist()
+    row_title = []
+    for inst_row in rows:
+      inst_title = 'Cell: ' + inst_row
+      row_title.append(inst_title)
+
+    df_keep.index = row_title
+
+    print('size of matrix when only keeping 28 antibodies ')
+    print(df_keep.shape)
+
+    df_keep.to_csv('cytof_data/'+inst_treatment+'_clean.txt', sep='\t')
+
+    print('save ' + inst_treatment)
+
 
 def precalc_downsample():
   from clustergrammer import Network
@@ -27,7 +85,7 @@ def precalc_downsample():
 
   from sklearn.cluster import MiniBatchKMeans
 
-  n_clusters = 500
+  n_clusters = 250
 
   # kmeans is run with rows as data-points and columns as dimensions
   mbk = MiniBatchKMeans(init='k-means++', n_clusters=n_clusters,
@@ -136,7 +194,7 @@ def combine_pma_plasma():
 
   df_both = pd.concat([df_Plasma, df_PMA], axis=0)
 
-  # only keep biological information
+  # only keep relevant measurements
   keep_cols, antibody_info = load_keep_antibodies()
 
   df_keep = df_both[keep_cols]
