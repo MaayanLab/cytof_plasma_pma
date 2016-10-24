@@ -1,0 +1,34 @@
+{
+  "phospho": [
+    "pSTAT5",
+    "pSTAT1",
+    "pSTAT3",
+    "pp38",
+    "pMAPKAP2",
+    "pPLCg2",
+    "IkBa",
+    "pCREB",
+    "pERK1_2",
+    "pS6"
+  ],
+  "surface": [
+    "CD57",
+    "CD45",
+    "CD19",
+    "CD4",
+    "CD8",
+    "CD16",
+    "CD127",
+    "CD1c",
+    "CD123",
+    "CD66b",
+    "CD27",
+    "CD14",
+    "CD56",
+    "CD25",
+    "CD3",
+    "CD38",
+    "CD161",
+    "HLADR"
+  ]
+}

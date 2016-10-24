@@ -1,0 +1,10 @@
+pSTAT5
+pSTAT1
+pSTAT3
+pp38
+pMAPKAP2
+pPLCg2
+IkBa
+pCREB
+pERK1_2
+pS6

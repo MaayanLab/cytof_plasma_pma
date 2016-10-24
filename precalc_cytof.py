@@ -1,10 +1,32 @@
 def main():
 
+  load_antibody_info()
+
   # combine_pma_plasma()
 
   # precalc_col_zscore()
 
-  precalc_subsets()
+  # precalc_subsets()
+
+def load_antibody_info():
+  print('save antibody info as dictionary')
+  from clustergrammer import Network
+
+  anti_types = ['surface_markers', 'phospho_markers']
+
+  anti_info = {}
+  for inst_type in anti_types:
+    filename = 'antibody_info/' + inst_type + '.txt'
+    f = open(filename)
+    lines = f.readlines()
+
+    lines = [i.strip() for i in lines]
+
+    anti_info[inst_type.split('_')[0]] = lines
+
+  net = Network()
+  net.save_dict_to_json(anti_info, 'antibody_info/anti_info.json',
+                        indent='indent')
 
 def precalc_subsets():
   import pandas as pd
