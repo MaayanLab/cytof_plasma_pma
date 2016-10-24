@@ -1,8 +1,8 @@
 def main():
 
-  load_antibody_info()
+  # load_antibody_info()
 
-  # combine_pma_plasma()
+  combine_pma_plasma()
 
   # precalc_col_zscore()
 
@@ -22,10 +22,10 @@ def load_antibody_info():
 
     lines = [i.strip() for i in lines]
 
-    anti_info[inst_type.split('_')[0]] = lines
+    anti_info[inst_type] = lines
 
   net = Network()
-  net.save_dict_to_json(anti_info, 'antibody_info/anti_info.json',
+  net.save_dict_to_json(anti_info, 'antibody_info/antibody_info.json',
                         indent='indent')
 
 def precalc_subsets():
@@ -92,9 +92,32 @@ def combine_pma_plasma():
 
   df_both = pd.concat([df_Plasma, df_PMA], axis=0)
 
-  df_both.to_csv('cytof_data/Plasma-PMA.txt', sep='\t')
+  # only keep biological information
+  keep_cols, antibody_info = load_keep_antibodies()
 
-  print(df_both.shape)
+  df_keep = df_both[keep_cols]
+
+  # add col categories
+  col_cats = []
+  cols = df_keep.columns.tolist()
+  for inst_col in cols:
+
+    if inst_col in antibody_info['surface_markers']:
+      inst_type = 'surface marker'
+    else:
+      inst_type = 'phospho marker'
+
+    inst_tuple = (inst_col, inst_type)
+
+    col_cats.append(inst_tuple)
+
+  df_keep.columns = col_cats
+
+  print('size of matrix when only keeping 28 antibodies ')
+  print(df_keep.shape)
+
+  df_keep.to_csv('cytof_data/Plasma-PMA.txt', sep='\t')
+
 
 def precalc_col_zscore():
   '''
@@ -116,5 +139,16 @@ def precalc_col_zscore():
     net.normalize(axis='col', norm_type='zscore')
 
     net.write_matrix_to_tsv('cytof_data/' + inst_data + '_col-zscore.txt')
+
+def load_keep_antibodies():
+  from clustergrammer import Network
+  net = Network()
+  antibody_info = net.load_json_to_dict('antibody_info/antibody_info.json')
+  keep_cols = []
+  for inst_marker in antibody_info:
+    markers = antibody_info[inst_marker]
+    keep_cols.extend(markers)
+
+  return keep_cols, antibody_info
 
 main()
