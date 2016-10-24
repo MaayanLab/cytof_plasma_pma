@@ -2,11 +2,11 @@ def main():
 
   # load_antibody_info()
 
-  combine_pma_plasma()
+  # combine_pma_plasma()
 
   # precalc_col_zscore()
 
-  # precalc_subsets()
+  precalc_subsets()
 
 def load_antibody_info():
   print('save antibody info as dictionary')
@@ -41,13 +41,15 @@ def precalc_subsets():
 
   print(df.shape)
 
-  rows = df.index.tolist()
+  num_sample = 500
 
-  sub = df.sample(n=500, axis=0)
+  # state int(random.random()*10000)
 
-  print(sub.shape)
+  inst_sub = df.sample(n=num_sample, axis=0, random_state=1000)
 
-  sub.to_csv('cytof_data/tmp_sub.txt', sep='\t')
+  print(inst_sub.shape)
+
+  inst_sub.to_csv('cytof_data/tmp_sub.txt', sep='\t')
 
 
 def combine_pma_plasma():
@@ -103,15 +105,26 @@ def combine_pma_plasma():
   for inst_col in cols:
 
     if inst_col in antibody_info['surface_markers']:
-      inst_type = 'surface marker'
+      inst_type = 'Marker-type: surface marker'
     else:
-      inst_type = 'phospho marker'
+      inst_type = 'Marker-type: phospho marker'
 
-    inst_tuple = (inst_col, inst_type)
+    inst_name = 'Antibody: ' + inst_col
+    inst_tuple = (inst_name, inst_type)
 
     col_cats.append(inst_tuple)
 
   df_keep.columns = col_cats
+
+  # add categories to cells
+  rows = df_keep.index.tolist()
+  row_cats = []
+  for inst_row in rows:
+    inst_cat = 'Treatment: ' + inst_row.split(': ')[1].split('-')[0]
+    inst_tuple = ( inst_row,  inst_cat)
+    row_cats.append(inst_tuple)
+
+  df_keep.index = row_cats
 
   print('size of matrix when only keeping 28 antibodies ')
   print(df_keep.shape)
