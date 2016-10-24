@@ -2,7 +2,30 @@ def main():
 
   # combine_pma_plasma()
 
-  precalc_col_zscore()
+  # precalc_col_zscore()
+
+  precalc_subsets()
+
+def precalc_subsets():
+  import pandas as pd
+  from clustergrammer import Network
+
+  # df = pd.read_csv('cytof_data/Plasma-PMA_col-zscore.txt', sep='\t')
+
+  net = Network()
+  net.load_file('cytof_data/Plasma-PMA_col-zscore.txt')
+  tmp_df = net.dat_to_df()
+  df = tmp_df['mat']
+
+  print(df.shape)
+
+  rows = df.index.tolist()
+
+  sub = df.sample(n=500, axis=0)
+
+  print(sub.shape)
+
+  sub.to_csv('cytof_data/tmp_sub.txt', sep='\t')
 
 
 def combine_pma_plasma():
