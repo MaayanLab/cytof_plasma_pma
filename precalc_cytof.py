@@ -2,7 +2,9 @@ def main():
 
   # load_antibody_info()
 
-  # combine_pma_plasma()
+  # clean_measurements()
+
+  combine_pma_plasma()
 
   # precalc_col_zscore()
 
@@ -10,7 +12,6 @@ def main():
 
   # precalc_downsample()
 
-  clean_measurements()
 
 def clean_measurements():
   from clustergrammer import Network
@@ -55,7 +56,7 @@ def clean_measurements():
     rows = df_keep.index.tolist()
     row_title = []
     for inst_row in rows:
-      inst_title = 'Cell: ' + inst_row
+      inst_title = 'Cell-' + inst_row
       row_title.append(inst_title)
 
     df_keep.index = row_title
@@ -161,8 +162,8 @@ def combine_pma_plasma():
   net_Plasma = deepcopy(Network())
   net_PMA = deepcopy(Network())
 
-  net_Plasma.load_file('cytof_data/Plasma.txt')
-  net_PMA.load_file('cytof_data/PMA.txt')
+  net_Plasma.load_file('cytof_data/Plasma_clean.txt')
+  net_PMA.load_file('cytof_data/PMA_clean.txt')
 
   tmp_df_Plasma = net_Plasma.dat_to_df()
   df_Plasma = tmp_df_Plasma['mat']
@@ -197,24 +198,28 @@ def combine_pma_plasma():
   # only keep relevant measurements
   keep_cols, antibody_info = load_keep_antibodies()
 
-  df_keep = df_both[keep_cols]
+  df_keep = df_both
+  # df_keep = df_both[keep_cols]
 
-  # add col categories
-  col_cats = []
-  cols = df_keep.columns.tolist()
-  for inst_col in cols:
+  print('df_keep size')
+  print(df_keep.size)
 
-    if inst_col in antibody_info['surface_markers']:
-      inst_type = 'Marker-type: surface marker'
-    else:
-      inst_type = 'Marker-type: phospho marker'
+  # # add col categories
+  # col_cats = []
+  # cols = df_keep.columns.tolist()
+  # for inst_col in cols:
 
-    inst_name = 'Antibody: ' + inst_col
-    inst_tuple = (inst_name, inst_type)
+  #   if inst_col in antibody_info['surface_markers']:
+  #     inst_type = 'Marker-type: surface marker'
+  #   else:
+  #     inst_type = 'Marker-type: phospho marker'
 
-    col_cats.append(inst_tuple)
+  #   inst_name = 'Antibody: ' + inst_col
+  #   inst_tuple = (inst_name, inst_type)
 
-  df_keep.columns = col_cats
+  #   col_cats.append(inst_tuple)
+
+  # df_keep.columns = col_cats
 
   # add categories to cells
   rows = df_keep.index.tolist()
@@ -229,7 +234,7 @@ def combine_pma_plasma():
   print('size of matrix when only keeping 28 antibodies ')
   print(df_keep.shape)
 
-  df_keep.to_csv('cytof_data/Plasma-PMA.txt', sep='\t')
+  df_keep.to_csv('cytof_data/Plasma-PMA_clean.txt', sep='\t')
 
 
 def precalc_col_zscore():
@@ -240,7 +245,7 @@ def precalc_col_zscore():
   from copy import deepcopy
   from clustergrammer import Network
 
-  data_types = ['Plasma', 'PMA', 'Plasma-PMA']
+  data_types = ['Plasma_clean', 'PMA_clean', 'Plasma-PMA']
 
   for inst_data in data_types:
     net = deepcopy(Network())
