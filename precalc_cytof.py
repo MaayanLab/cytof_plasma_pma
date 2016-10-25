@@ -13,6 +13,27 @@ def main():
   precalc_downsample()
 
 
+
+def precalc_downsample():
+  from clustergrammer import Network
+
+  net = Network()
+
+  # net.load_file('cytof_data/Plasma_clean_col-zscore.txt')
+  net.load_file('cytof_data/PMA_clean_col-zscore.txt')
+  # net.load_file('cytof_data/tmp_sub.txt')
+  tmp_df = net.dat_to_df()
+
+  df = tmp_df['mat']
+
+  n_clusters = 250
+  ds_df, mbk_labels = run_kmeans_mini_batch(df, n_clusters)
+
+  ds_df = ds_df.transpose()
+  ds_df.to_csv('cytof_data/tmp_down.txt', sep='\t')
+
+
+
 def clean_measurements():
   from clustergrammer import Network
   from copy import deepcopy
@@ -69,20 +90,7 @@ def clean_measurements():
     print('save ' + inst_treatment)
 
 
-def precalc_downsample():
-  from clustergrammer import Network
 
-  net = Network()
-
-  # net.load_file('cytof_data/Plasma_clean_col-zscore.txt')
-  net.load_file('cytof_data/tmp_sub.txt')
-  tmp_df = net.dat_to_df()
-
-  df = tmp_df['mat']
-
-  n_clusters = 20
-  ds_df = run_kmeans_mini_batch(df, n_clusters)
-  ds_df.to_csv('cytof_data/tmp_down.txt', sep='\t')
 
 def run_kmeans_mini_batch(df, n_clusters):
   from sklearn.cluster import MiniBatchKMeans
@@ -129,7 +137,7 @@ def run_kmeans_mini_batch(df, n_clusters):
 
   ds_df = pd.DataFrame(data=ds, columns = cols, index=row_cats)
 
-  return ds_df
+  return ds_df, mbk_labels
 
 def load_antibody_info():
   print('save antibody info as dictionary')
