@@ -12,6 +12,7 @@ function make_clust(make_sim_mats){
     args.root = '#container-id-1';
     args.network_data = network_data;
     args.row_tip_callback = gene_info;
+    args.input_domain = 5;
 
     cgm['clust'] = Clustergrammer(args);
     d3.select(cgm['clust'].params.root+' .wait_message').remove();

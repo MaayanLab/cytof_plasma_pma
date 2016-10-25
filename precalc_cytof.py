@@ -4,13 +4,13 @@ def main():
 
   # clean_measurements()
 
-  combine_pma_plasma()
+  # combine_pma_plasma()
 
   # precalc_col_zscore()
 
   # precalc_subsets()
 
-  # precalc_downsample()
+  precalc_downsample()
 
 
 def clean_measurements():
@@ -71,23 +71,25 @@ def clean_measurements():
 
 def precalc_downsample():
   from clustergrammer import Network
-  import numpy as np
-  import pandas as pd
 
   net = Network()
 
-  net.load_file('cytof_data/Plasma-PMA_col-zscore.txt')
+  # net.load_file('cytof_data/Plasma_clean_col-zscore.txt')
+  net.load_file('cytof_data/tmp_sub.txt')
   tmp_df = net.dat_to_df()
+
   df = tmp_df['mat']
 
-  cols = df.columns.tolist()
+  n_clusters = 20
+  ds_df = run_kmeans_mini_batch(df, n_clusters)
+  ds_df.to_csv('cytof_data/tmp_down.txt', sep='\t')
+
+def run_kmeans_mini_batch(df, n_clusters):
+  from sklearn.cluster import MiniBatchKMeans
+  import pandas as pd
+  import numpy as np
 
   X = df
-
-  from sklearn.cluster import MiniBatchKMeans
-
-  n_clusters = 250
-
   # kmeans is run with rows as data-points and columns as dimensions
   mbk = MiniBatchKMeans(init='k-means++', n_clusters=n_clusters,
                         max_no_improvement=10, verbose=0)
@@ -98,16 +100,36 @@ def precalc_downsample():
   # digits make up each cluster. Then I can work on overrepresentation examples.
   ################################################
   mbk.fit(X)
-  mbk_means_labels = mbk.labels_
-  mbk_means_cluster_centers = mbk.cluster_centers_
-  mbk_means_labels_unique = np.unique(mbk_means_labels)
+  mbk_labels = mbk.labels_
+  mbk_clusters = mbk.cluster_centers_
 
-  ds = mbk_means_cluster_centers
+  mbk_cluster_names, mbk_cluster_pop = np.unique(mbk_labels, return_counts=True)
 
-  ds_df = pd.DataFrame(data=ds, columns = cols )
+  print('============================')
+  print(mbk_cluster_names)
+  print(mbk_cluster_pop)
+  print('============================')
+  print(mbk_labels)
 
-  ds_df.to_csv('cytof_data/tmp_down.txt', sep='\t')
+  row_numbers = range(n_clusters)
+  row_labels = [ 'cluster-' + str(i) for i in row_numbers]
 
+  # add number of points in each cluster
+  row_cats = []
+  for i in range(n_clusters):
+
+    inst_name = row_labels[i]
+    inst_count = mbk_cluster_pop[i]
+    inst_tuple = ( inst_name, inst_count )
+    row_cats.append(inst_tuple)
+
+  ds = mbk_clusters
+
+  cols = df.columns.tolist()
+
+  ds_df = pd.DataFrame(data=ds, columns = cols, index=row_cats)
+
+  return ds_df
 
 def load_antibody_info():
   print('save antibody info as dictionary')
@@ -245,7 +267,7 @@ def precalc_col_zscore():
   from copy import deepcopy
   from clustergrammer import Network
 
-  data_types = ['Plasma_clean', 'PMA_clean', 'Plasma-PMA']
+  data_types = ['Plasma_clean', 'PMA_clean', 'Plasma-PMA_clean']
 
   for inst_data in data_types:
     net = deepcopy(Network())

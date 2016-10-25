@@ -3,7 +3,7 @@ def main():
   from clustergrammer import Network
   print('here')
 
-  filename = 'cytof_data/tmp_col_qn.txt'
+  filename = 'cytof_data/tmp_down.txt'
 
   net = Network()
 
