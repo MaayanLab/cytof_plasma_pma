@@ -1,0 +1,16 @@
+# SPADE paper notes
+CD19 - B cells
+CD3 - T cells
+CD33 - Monocytes
+CD34 - Hematopoietic stem cells
+CD7 and CD16 - Natural Killer cells
+
+Natural Killer cells
+---------------------
+Express a unique combination of the core surface markers:
+CD45+
+CD45RA+
+CD38+
+CD19-
+
+which distinguishes them from other cell types.
