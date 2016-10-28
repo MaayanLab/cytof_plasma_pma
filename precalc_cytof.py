@@ -19,8 +19,8 @@ def precalc_downsample():
 
   net = Network()
 
-  # net.load_file('cytof_data/Plasma_clean_col-zscore.txt')
-  net.load_file('cytof_data/PMA_clean_col-zscore.txt')
+  net.load_file('cytof_data/Plasma_clean_col-zscore.txt')
+  # net.load_file('cytof_data/PMA_clean_col-zscore.txt')
   # net.load_file('cytof_data/tmp_sub.txt')
   tmp_df = net.dat_to_df()
 
@@ -29,7 +29,18 @@ def precalc_downsample():
   n_clusters = 250
   ds_df, mbk_labels = run_kmeans_mini_batch(df, n_clusters)
 
+  # reduce the max value to improve visibility
+  ds_df[ds_df>5] = 8
+
   ds_df = ds_df.transpose()
+
+  tmp_rows = ds_df.index.tolist()
+
+  for inst_row in tmp_rows:
+    inst_row[0].replace('p','')
+
+  ds_df.index = tmp_rows
+
   ds_df.to_csv('cytof_data/tmp_down.txt', sep='\t')
 
 
@@ -126,8 +137,8 @@ def run_kmeans_mini_batch(df, n_clusters):
   row_cats = []
   for i in range(n_clusters):
 
-    inst_name = row_labels[i]
-    inst_count = mbk_cluster_pop[i]
+    inst_name = 'cell-clusters: ' + row_labels[i]
+    inst_count =  'number of cells: '+ str(mbk_cluster_pop[i])
     inst_tuple = ( inst_name, inst_count )
     row_cats.append(inst_tuple)
 
