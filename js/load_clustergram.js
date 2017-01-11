@@ -2,7 +2,12 @@
 /*
 Example files
 */
+
+var hzome = ini_hzome();
+
 make_clust('mult_view.json');
+
+var about_string = 'Zoom, scroll, and click buttons to interact with the clustergram. <a href="http://amp.pharm.mssm.edu/clustergrammer/help"> <i class="fa fa-question-circle" aria-hidden="true"></i> </a>';
 
 function make_clust(inst_network){
 
@@ -12,9 +17,14 @@ function make_clust(inst_network){
       var args = {
         root: '#container-id-1',
         'network_data': network_data,
-        'about':'Zoom, scroll, and click buttons to interact with the clustergram.',
-        'row_tip_callback':gene_info,
-        'sidebar_width':150
+        'about':about_string,
+        'row_tip_callback':hzome.gene_info,
+        'col_tip_callback':test_col_callback,
+        'tile_tip_callback':test_tile_callback,
+        'dendro_callback':dendro_callback,
+        'matrix_update_callback':matrix_update_callback,
+        'sidebar_width':150,
+        // 'ini_view':{'N_row_var':20}
       };
 
       resize_container(args);
@@ -28,12 +38,42 @@ function make_clust(inst_network){
 
       d3.select(cgm.params.root + ' .wait_message').remove();
 
-      // Enrichr categories
-      //////////////////////
-      enr_obj = Enrichr_request(cgm);
-      enr_obj.enrichr_icon();
+      // there are too few genes to run Enrichr
+      // check_setup_enrichr(cgm);
 
   });
+
+}
+
+function matrix_update_callback(){
+  if (genes_were_found){
+    enr_obj.clear_enrichr_results();
+  }
+}
+
+function test_tile_callback(tile_data){
+  var row_name = tile_data.row_name;
+  var col_name = tile_data.col_name;
+
+}
+
+function test_col_callback(col_data){
+  var col_name = col_data.name;
+}
+
+function dendro_callback(inst_selection){
+
+  var inst_rc;
+  var inst_data = inst_selection.__data__;
+
+  // toggle enrichr export section
+  if (inst_data.inst_rc === 'row'){
+    d3.select('.enrichr_export_section')
+      .style('display', 'block');
+  } else {
+    d3.select('.enrichr_export_section')
+      .style('display', 'none');
+  }
 
 }
 
