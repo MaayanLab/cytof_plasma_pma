@@ -1,4 +1,4 @@
-# SPADE paper notes
+# SPADE paper notes (http://www.nature.com/nbt/journal/v29/n10/full/nbt.1991.html)
 CD19 - B cells
 CD3 - T cells
 CD33 - Monocytes
@@ -14,3 +14,11 @@ CD38+
 CD19-
 
 which distinguishes them from other cell types.
+
+Phosphorylation Markers
+-------------------------
+TNF induction of phosphorylated MAPKAPK2 was observed in myeloid and NK cell types
+
+"LPS-induced degradation of total IkaBa (an indicator of NFkB pathway activation), was restricted to cells of the monocytoid lineage (which uniquely expresses the receptor for LPS)."
+
+phosphorylated STAT5 (after stimulation with thrombopietin, TPO) expected in HSCs
