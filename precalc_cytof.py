@@ -2,7 +2,7 @@ def main():
 
   # load_antibody_info()
 
-  # clean_measurements()
+  clean_measurements()
 
   # combine_pma_plasma()
 
@@ -10,7 +10,7 @@ def main():
 
   # precalc_subsets()
 
-  precalc_downsample()
+  # precalc_downsample()
 
 
 
@@ -89,7 +89,9 @@ def clean_measurements():
     row_title = []
     for inst_row in rows:
       inst_title = 'Cell-' + inst_row
-      row_title.append(inst_title)
+      inst_cat = 'Treatment: ' + inst_treatment
+      inst_tuple = (inst_title, inst_cat)
+      row_title.append(inst_tuple)
 
     df_keep.index = row_title
 
