@@ -26,9 +26,13 @@ phosphorylated STAT5 (after stimulation with thrombopietin, TPO) expected in HSC
 
 # Notes on cell types
 #########################
-
+/
 ## Natural Killer Cell Cluster
 The left cluster of cells has high levels of *CD16* and *CD56* surface markers, which are usually expressed in natural killer cells.
 
 ## T Cell Cluster
 Teh right cluster appears to be broadly classified as T-cells due to high CD4 and CD3 levels.
+
+PMA
+=========
+http://www.abcam.com/hela-signaling-cascade-whole-cell-lysate-set-pma-treated-and-vehicle-treated-control-ab170195.html
