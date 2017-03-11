@@ -22,3 +22,13 @@ TNF induction of phosphorylated MAPKAPK2 was observed in myeloid and NK cell typ
 "LPS-induced degradation of total IkaBa (an indicator of NFkB pathway activation), was restricted to cells of the monocytoid lineage (which uniquely expresses the receptor for LPS)."
 
 phosphorylated STAT5 (after stimulation with thrombopietin, TPO) expected in HSCs
+
+
+# Notes on cell types
+#########################
+
+## Natural Killer Cell Cluster
+The left cluster of cells has high levels of *CD16* and *CD56* surface markers, which are usually expressed in natural killer cells.
+
+## T Cell Cluster
+Teh right cluster appears to be broadly classified as T-cells due to high CD4 and CD3 levels.
