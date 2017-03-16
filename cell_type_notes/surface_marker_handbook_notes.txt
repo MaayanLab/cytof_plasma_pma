@@ -2,7 +2,15 @@ BD Sciences handbook notes
 --------------------------
 Group-1
     CD3
-        T Cell
+        T Cell <- found on all mature T-cells
+        -------------------------------------
+
+        Wiki
+        In immunology, the CD3 (cluster of differentation 3) T-cell co-receptor helps to activate the cytotoxic T-cell. It consists of ...
+
+        Immunohistochemistry: CD3 is initially expressed in the cytoplasm of pro-thymocytes, the stem cells from which T-cells arise in the thymus. The pro-thymocytes differentiate into common thymocytes, and then into medullary thymocytes, and it is at this latter stage that CD3 antigen begins to migrate to the cell membrane. The antien is found bound to the membranes of all mature T-cells, and in virtually no other cell type, although it does appear to be present in small amounts in Purkinje cells.
+
+        The high specificity, combined with the presence of CD3 at all stages of T-cell development, makes it a useful immunohistochemical marker for T-cells in tissue ... The antigen remains present in almost all T-cell lymphomas and leukemias, and can therefore be used to distniguish them from superfically similar B-cell and myeloid neiplasms.
 
     CD4
         T Cell
@@ -23,6 +31,9 @@ Group-1
 Group-2
     CD8
         T Cell
+        Cluster of differentiation 8 (CD8) is a transmembrane glycoprotein that serves as a co-receotpr for the T cell receptor (TCR). Like the TCR, CD8 binds to a major...
+
+        The CD8 co-receptor is predominantly expressed on the surface of cytotoxic T cells, but can also be found on natural killer cells, cortical thymocytes, and dendritic cells. ...
 
 Group-3
     HLADR

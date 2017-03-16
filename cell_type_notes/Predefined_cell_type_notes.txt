@@ -25,15 +25,61 @@ NKT cells
   +CD56
 
 NK cells
+  Natural killer cells (also known as NK cells, K cells and killer cells) are a type of mymphocyte (a white blood cell) and a component of the innate immune system. NK cells play a major role in the host-recognition of both tumors and virally infected cells.
+
+  +CD16
+  +CD56
+  -CD3
 
 Monocytes
+  Type of white blood cell, or leukocyte. They are the largest type of leukocyte and can differentiate into macrophages and myeloid lineage dendritic cells.
+
+  There are at least three types of monocytes in human blood
+  * classic +CD14, -CD16
+  * non-classical, -CD14, +CD16
+  * intermediate monocytae, +CD14, -CD16
 
 CD8 T Cells
+  Cytotoxic T cell is a T lymphocyte.
 
 CD4 T Cells
+  T helper cells are a type of T cell that play an important rolw in the immune system, particularly in the adaptive immune system. The help the activity of other immune cells by releasing T cell cytokines. These cells help suppress or regulate immune responses. They are essential in B cell antibody class switching,  int he activation and growth of cytotoxic T cells, and in maximizing bactericidal activity of phagocytoes such as macrophges.
+
+  Mature Th cells express the surface protein CD4 and are referred to as CD4+ T cells. Such CD4+ T cells are generally greated as having a pre-defined role as helper T cells within the immune system....
 
 CD1c DCs
+  CD1c Dendritic cells
+
+  Article:
+  Human blood contains two populations of dendritic cells (DCs): plasmacytoid and myeloid (mDC). mDCs are subdivided into three subsets using the surface markers CD16, CD1c, and BDCA-3. ... The most represented subsets, CD16 and CD1c ...
+
+  Wiki CD1
+  Cluster of differentiation 1 (CD1) is a family of glycoproteins expressed on the surface of various human antigen-presenting cells. They are related to the class 1 MHC molecules aren are involved int he presentation of lipid antigens to T cels. However their precise function is unknown.
+
+  CD1 glycoproteins can be classified into two groups which differ in their lipid anchoring
+  * CD1a, CD1b, and CD1c are expressed on cells specialized for antigen presentation
+  * CD1d is expressed in a wider variety of cells.
 
 Basophils
+  A basophil is a type of white blood cell. Basophils are the least common of granulocytes, representing about 0.5 - 1.0% of circulating white blood cells. However, they are they are the largest type of granlocyte. they are responsible for inflammatory reactions during immune response, as well as in the formation of acute and chronic allergic diseases, including anaphylaxis, asthma, atopic dermatitis,...
+
+  CD123 is thought to be a marker.
 
 B Cells
+  B cells, also known as B lymphocytes, are a type of white blood cell of the lymphocyte subtype. They function in the humoral immunity component of hte adaptive immune system by secreting antibodies....
+
+  http://www.abcam.com/primary-antibodies/b-cells-basic-immunophenotyping
+
+  Immature B cells express
+    *CD19
+    * CD20
+    * CD34
+    * CD38
+    * CD45R
+
+  For most mature B cells the jey markers include
+    * IgM
+    CD19
+
+  Activated B cells express
+    * CD30
