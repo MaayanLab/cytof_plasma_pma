@@ -31,6 +31,12 @@ NK cells
   +CD56
   -CD3
 
+  http://technical.sanguinebio.com/natural-killer-cell-subtypes-and-markers-in-human-pbmc/
+
+  Natural killer cells are a cytotoxic innate immune lymphocyte cell type. In humans, NK cells comprise up to 15% of peripheral blood mononuclear cells (PBMC), and 5-20% of the PBMC lyphocyte population. several subtypes of NK cells exist in humans. In this post, I will discuss hte phenotypic properties and markers of NK subtypes present in human PBMC.
+
+  Three sybtypes of NK cells are recognized: CD56dim CD16+, CD56bright CD16+-, and CD56- CD16+ NK cells. The CD56 dim CD16+ and CD56 bright CD16+- subsets are the best studied and are phentypically classified as a more cytotoxis and more cytokine roducing sybset of N cells, respectively.
+
 Monocytes
   Type of white blood cell, or leukocyte. They are the largest type of leukocyte and can differentiate into macrophages and myeloid lineage dendritic cells.
 

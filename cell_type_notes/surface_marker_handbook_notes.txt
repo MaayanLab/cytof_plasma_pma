@@ -62,34 +62,77 @@ Group-3
         https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1906016/
         Of the molecules expressed on monotytes, HLA-DR allows antigen presentation to T cells ... Monocyte expression of HLA-DR has been found l...
 
+        http://onlinelibrary.wiley.com/store/10.1002/cyto.a.22104/asset/22104_ftp.pdf;jsessionid=A0B4A16AF17EB9834F6D68255DF3BB72.f03t04?v=1&t=j0cx6nh2&s=9c3d73b7ac0eb090a0636a154f5a7db3265cafd1
+
+        CD14, CD16, and HLA-DR reliably identifis human monocytes and tierh substs. ...
+
     CD1c
         T Cell, B Cell, Dendritic Cell, Macrophage/Monocyte
+
+        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4911075/
+        CD1c expression by monocytes...
+        Conventional dendritic cells (cDCs) comprise a heterogeneous population of cells that are important regulators of immunity and homeostasis. CD1c+ cDCs are present in human blood and tissues, and found to efficiently activate naive CD4+T cells. While CD1c is thought to specifically identify this subset of human cDCs, we show here that also classical and intermediate monocytes express CD1c...
 
     CD19
         B Cell, Dendritic Cell, Stem Precursor
 
+        B-lymphocyte antigen CD19, also known as CD19, is found on the surface of B-cells, a type of white blood cell. Lymphocytes proliferate and differentiate in response to various concentrations of different antigens. The ability of the B cell ro respond in a specific, yet sensitive manner to various antigens is achieved with the use of low affinity antigen receptors. The CD19 gene encodees a cell surface molecule that assembles with the antigen receptor of B lymphocytes in order to decrease the threshold for antigen receptor-dependent stimulation.
+
+        CD19 is expressed on follicular dendritic cells and B cells. In fact is is present on B cells from the earliest recognizable B-lineage cells during development to B-cell blasts but is lost on maturation to plasma cells.
+
     CD14
+        Macrophages mainly
         Macrophage/Monocyte, Granulocyte (wiki Monocytes)
+
+        CD14 is expressed mainly by macrophages and (at a 10 times lesser extent) by neurtophils. It is also expressed in dendritic cells.
 
     CD123
         Dendritic Cell, Stem Cell/Progenetor, Granulocyte
+
+        The interleukin-3 receptor (also known as CD123 antigen) is a molecule found on cells which helps transmit the signal of interleukin-3, a soluble cytokine important in the immune system.
+
+        The receptor, found on the pluripotent progenitor cells, induces tyrosine phosphorylation within the cell and promotes proliferation and differentation within the hematopoietic cell lines. It can be found on Basophils and pDCs as well as some cDC ...
 
 
 Group-4 (maybe NKT cells)
     CD38
         T Cell, B Cell, Dendritic Cell, NK Cell, Stem Cell/Precursor, Macrophage/Monocyte
 
+        CD38 also known as cyclic ADP ribose hydrolase is a glycoprotein found on the surface of many immune cells (white blood cells) including CD4+, CD8+, B lymphocytes and natural killer cells. CD38 also functions in cell adhesion, signal transduction, and calcium signaling.
+
     CD56
         T Cell, NK Cell
+
+        During hematopoiesis, CD56 is the prototypic marker of NK cells, also present on a subset of CD4+ T cells and CD8+ T cells.
 
     CD161
         T Cell, NK Cell
 
+        Killer cell lectin-like receptor subfamily B, member 1 also known as CD161.
+
+        http://www.bloodjournal.org/content/119/17/3987?sso-checked=true
+        Human NK cells at early stages of differentiation produce CXCL8 and express CD161 molecule that functions as an activating receptor.
+        Human natural killer cell development is a step-by-step process characterized by phenotypically identified stages. CD161 is a marker informative of the NK cell lineage commitment, whereas CD56 and CD117, and CD94 contribute to define discrete differentiation stages. In cells undergoing in vitro differentiation from CD34+ progenitors, LFA-1 expression ...
+
     CD66b
         Granulocyte
+
+        http://www.jimmunol.org/content/179/12/8454.full
+
+        CD66b regulates adhesion and activation of human eosinophils
+
+        CD66b is an activation marker for human granulocytes; howver, its biological function are largely unknown in eosin...
 
     CD57
         T Cell, NK Cell
 
+        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3856678/
+
+        Functional significance of CD57 expression on human NK cells and relevance to disease
+
+        Historically, human NK cells have been identified as CD3- CD56+ CD16+ lymphocytes. More recently it has been established that CD57 expression defines functionally discrete subpopulation of NK cells. On T cells, CD57 expression has been regarded as a marker of terminal differentation and (perhaps wrongly) of anergy and senescence. Simiarly, CD57 expression seems to identify the final stages of peripheral NK cell maturation; its expression increases with age and is assocaited with chronic infections, particular ... However, CD57 NK cells are highly cytotoxic and their presence seems to be beneficial in a number of non-communicable diseases. The purpose of this article is to review our current understanding of CD57 expression of NK cell function and ...
+
     CD16
         T Cell, Dendritic Cell, NK Cell, Macrophage/Monocyte, Granulocyte
+
+        CD16 is a molecule found ont he surface of natural killer cells, neutrophil polymorphonuclear leukocytes, monocytes and macrophages. It can be used to isolate populations of htese cells ...
