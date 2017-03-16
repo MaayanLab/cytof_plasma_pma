@@ -42,10 +42,19 @@ Group-3
 
 Group-4
     CD38
+        T Cell, B Cell, Dendritic Cell, NK Cell, Stem Cell/Precursor, Macrophage/Monocyte
 
     CD56
-    CD161
-    CD66b
-    CD57
-    CD16
+        T Cell, NK Cell
 
+    CD161
+        T Cell, NK Cell
+
+    CD66b
+        Granulocyte
+
+    CD57
+        T Cell, NK Cell
+
+    CD16
+        T Cell, Dendritic Cell, NK Cell, Macrophage/Monocyte, Granulocyte
