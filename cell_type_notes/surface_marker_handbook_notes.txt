@@ -13,30 +13,54 @@ Group-1
         The high specificity, combined with the presence of CD3 at all stages of T-cell development, makes it a useful immunohistochemical marker for T-cells in tissue ... The antigen remains present in almost all T-cell lymphomas and leukemias, and can therefore be used to distniguish them from superfically similar B-cell and myeloid neiplasms.
 
     CD4
-        T Cell
+        T Cell, CD4 T helper cells
+
+        In molecular biology, CD4 is a glycoprotein found on the surface of immune cells such as T helper cells, monocytes, macrophages, and dendritic cells. CD4+ T helper cells are white blood cells that are an essential part of the human immune system. They are often referred to as CD3 cells, T-helper cells or T4 cells.
 
     CD45
         T Cell, B Cell, Dendritic Cell, NK Cell, Stem Cell Precursor,
         Macrophage/Monocyte, Granulocyte
 
+        Protein tyrosine phosphtase, receptor type C, also known as PTPRC or CD45 antigen. A monoclonal antibody
+
+        http://www.abcam.com/cd45-antibody-ab10558.html
+
+        CD45 phosphatase is required for T-cell activation through the antigen receptor. Acts as a postitive regulator of T-cell coactivation upon binding to DPP4.
+
     CD27
         T Cell, B Cell, NK Cell
+
+        CD2 is a member of the tumor necrosis factor receptor superfamily. It is currently of interest to immunologisst as a co-stimulatory immune checkpoint. This receptor is required for generation and long-term maintenance of T cell immunity.
+
+        It is discussed in a B-cell identifying handbook.
 
     CD127
         T Cell, Stem Cell/Precursor, Macrophage/Monocyte
 
+        The interleukin-7 receptor is a protein found on the suface of cells. interleukin-7 receptor alpha CD127...
+
+        https://www.ncbi.nlm.nih.gov/pubmed/18390743
+        Decreased CD4(+) T cell counts are the best marker of disease progression during HIV infection. However, CD4+T cells are heterogeneous in phenotype and function, and it is unknown how preferential depletion of specific CD4+T cell subsets influences disease severity. CD4+T cells can be classified into three subsets by the expression of receptors for two T cell-tropic cytokines. IK-2 (CD25) and IL-7 (CD127). the CD127 subsets includes IL-2 producing naive and central memory T cells, the ...
+
     CD25
         T Cell, B Cell, NK Cell, Macrophage/Monocyte
 
+        It is a type I transmembrane protein present on activated T cells, activated B cells, some thymocytes, myeloid precursors, and oligodendrocytes. ...
+
 Group-2
     CD8
-        T Cell
+        T Cell <- cytotoxic T cells
+
         Cluster of differentiation 8 (CD8) is a transmembrane glycoprotein that serves as a co-receotpr for the T cell receptor (TCR). Like the TCR, CD8 binds to a major...
 
         The CD8 co-receptor is predominantly expressed on the surface of cytotoxic T cells, but can also be found on natural killer cells, cortical thymocytes, and dendritic cells. ...
 
 Group-3
     HLADR
+        HLA-DR is a MHC class II cell surface receptor encoded byt he human leykocyte antigen complex ... It constitutes a ligand for hte T-cell receptor.
+
+        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1906016/
+        Of the molecules expressed on monotytes, HLA-DR allows antigen presentation to T cells ... Monocyte expression of HLA-DR has been found l...
 
     CD1c
         T Cell, B Cell, Dendritic Cell, Macrophage/Monocyte
