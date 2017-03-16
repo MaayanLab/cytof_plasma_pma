@@ -1,0 +1,51 @@
+BD Sciences handbook notes
+--------------------------
+Group-1
+    CD3
+        T Cell
+
+    CD4
+        T Cell
+
+    CD45
+        T Cell, B Cell, Dendritic Cell, NK Cell, Stem Cell Precursor,
+        Macrophage/Monocyte, Granulocyte
+
+    CD27
+        T Cell, B Cell, NK Cell
+
+    CD127
+        T Cell, Stem Cell/Precursor, Macrophage/Monocyte
+
+    CD25
+        T Cell, B Cell, NK Cell, Macrophage/Monocyte
+
+Group-2
+    CD8
+        T Cell
+
+Group-3
+    HLADR
+
+    CD1c
+        T Cell, B Cell, Dendritic Cell, Macrophage/Monocyte
+
+    CD19
+        B Cell, Dendritic Cell, Stem Precursor
+
+    CD14
+        Macrophage/Monocyte, Granulocyte
+
+    CD123
+        Dendritic Cell, Stem Cell/Progenetor, Granulocyte
+
+
+Group-4
+    CD38
+
+    CD56
+    CD161
+    CD66b
+    CD57
+    CD16
+

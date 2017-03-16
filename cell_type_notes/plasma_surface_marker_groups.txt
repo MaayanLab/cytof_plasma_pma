@@ -1,0 +1,31 @@
+Plasma
+----------------
+Group-1
+    CD3
+    CD4
+    CD45
+    CD27
+    CD127
+    CD25
+
+Group-2
+    CD8
+    (CD27)
+
+Group-3
+    HLADR
+    CD1c
+    CD19
+    CD14
+    CD123
+
+Group-4
+    CD38
+    CD56
+    CD161
+    CD66b
+    CD57
+    CD16
+
+
+

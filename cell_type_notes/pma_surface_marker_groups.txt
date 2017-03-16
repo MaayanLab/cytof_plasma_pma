@@ -1,0 +1,32 @@
+PMA
+----------------
+Group-4
+    CD3
+    CD4
+    CD45
+    CD27
+    CD127
+    CD25
+
+Group-1A
+    (like Group-1 but high CD161)
+Group-1B
+    (like Group-1 but high CD38)
+
+Group-3
+    CD8
+
+Group-2
+    HLADR
+    CD1c
+    CD19
+    CD14
+    CD123
+
+Group-1
+    CD38
+    CD56
+    CD161
+    CD66b
+    CD57
+    CD16
