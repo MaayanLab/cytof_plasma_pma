@@ -44,7 +44,7 @@ I decided to look at the old figures I had sent to Simon to see what categories 
 
 http://amp.pharm.mssm.edu/clustergrammer/viz_sim_mats/57361627cd39860022525a34/phospho_matrix.txt
 
-pDCs
+pDCs (Plasmacytoid dendritic cells)
 NKT cells
 NK cells
 Monocytes
@@ -53,7 +53,6 @@ CD4 T Cells
 CD1c DCs
 Basophils
 B Cells
-
 
 http://amp.pharm.mssm.edu/clustergrammer/viz_sim_mats/573a4daacd39861a768d5331/cytof_phos_orig_row_alt_zscore_col_rearrange.txt
 

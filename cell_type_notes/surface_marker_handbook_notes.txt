@@ -34,13 +34,13 @@ Group-3
         B Cell, Dendritic Cell, Stem Precursor
 
     CD14
-        Macrophage/Monocyte, Granulocyte
+        Macrophage/Monocyte, Granulocyte (wiki Monocytes)
 
     CD123
         Dendritic Cell, Stem Cell/Progenetor, Granulocyte
 
 
-Group-4
+Group-4 (maybe NKT cells)
     CD38
         T Cell, B Cell, Dendritic Cell, NK Cell, Stem Cell/Precursor, Macrophage/Monocyte
 

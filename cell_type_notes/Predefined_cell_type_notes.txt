@@ -1,0 +1,39 @@
+Mainly wiki notes on pre-defined cell types
+
+pDCs (Plasmacytoid dendritic cells)
+  Plasmacytoid dendritic cells (pDCs) are innate immune cells that circulate in the blood and are found in peripheral lymphoid organs. They develop from bone marrow hematopoietic stem cells and constitute < 0.4% of peripheral blood mononuclear cells (PBMC)
+
+  In humans they exhibit plasma cell morphology and express
+  + CD4
+  + HLA-DR
+  + CD123
+  + BDCA-1 (blood-derived dendritic antigen-2)
+  + TLR7 (toll-like receptor)
+
+  within endosomal compartments, but do not express high levels of
+  - CD11c (conventional dendritic cells)
+  - CD14 (monocytes)
+
+  which distinguishes them from conventional dendritic cells or monocytes respectively
+
+NKT cells
+  Natural killer T (NKT) cells are a heterogeneous group of T cells that share properties of both T cells and natural killer cells. Man of these cells recognize the non-polymorphoic CD1d molecule, an antigen-presenting molecule that binds self and foreign lipids and glycolipids.
+
+  +-CD4
+  +-CD8
+  +CD16
+  +CD56
+
+NK cells
+
+Monocytes
+
+CD8 T Cells
+
+CD4 T Cells
+
+CD1c DCs
+
+Basophils
+
+B Cells
