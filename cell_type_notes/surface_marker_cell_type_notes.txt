@@ -32,21 +32,35 @@ Group-4
 
 
 PMA
-    CD57
-    CD45
-    CD19
-    CD4
-    CD8
-    CD16
-    CD127
-    CD1c
-    CD123
-    CD66b
-    CD27
-    CD14
-    CD56
-    CD25
-    CD3
+----------------
+Group-1
     CD38
+    CD16
+    CD56
     CD161
+    CD66b
+    CD57
+
+Group-1A
+    (same as Group-1)
+Group-1B
+    (same as Group-1)
+
+Group-2
     HLADR
+    CD1c
+    CD19
+    CD123
+    CD14
+
+Group-3
+    CD8
+
+Group-4
+    CD3
+    CD4
+    CD45
+    CD27
+    CD127
+    CD25
+
