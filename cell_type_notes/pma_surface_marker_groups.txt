@@ -1,12 +1,12 @@
 PMA
 ----------------
-Group-4
-    CD3
-    CD4
-    CD45
-    CD27
-    CD127
-    CD25
+Group-4 (T cells)
+    CD3 T Cell
+    CD4 T helper, monocytes...
+    CD45 T-cell
+    CD27 T cell, B cell
+    CD127 T cell
+    CD25 T cell
 
 Group-1A
     (like Group-1 but high CD161)
@@ -14,19 +14,27 @@ Group-1B
     (like Group-1 but high CD38)
 
 Group-3
-    CD8
+    CD8 CD8-T-cell
 
-Group-2
-    HLADR
-    CD1c
-    CD19
-    CD14
-    CD123
+Group-2 (Monocytes/Granulocytes)
+    HLADR monocyte
+    CD1c monocytes
+    CD19 B-cell
+    CD14 macrophages
+    CD123 DC, Granulocyte
 
-Group-1
-    CD38
-    CD56
-    CD161
-    CD66b
-    CD57
-    CD16
+Group-1 (NK)
+    CD38 NK, T, B
+    CD56 NK (prototypical marker)
+    CD161 NK
+    CD66b granulocytes
+    CD57 NK
+    CD16 NK
+
+
+
+granulocyte
+    - which encompass neutrophils, eosinophils and basophils;
+
+Monocytes
+    - which migrate to tissues and transform into macrophages;
