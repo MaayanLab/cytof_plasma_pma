@@ -1,3 +1,7 @@
+PMA
+----
+Notes are in the PMA_notes.txt file.
+
 # SPADE paper notes (http://www.nature.com/nbt/journal/v29/n10/full/nbt.1991.html)
 CD19 - B cells
 CD3 - T cells

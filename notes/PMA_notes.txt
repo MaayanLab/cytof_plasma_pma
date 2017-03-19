@@ -1,0 +1,12 @@
+PMA treatment
+-------------
+  PHORBOL-12-MYRISTATE-13-ACETATE
+
+  https://www.hindawi.com/journals/bmri/2015/318306/#B9
+  PMA, a structural analogue of diacylglycerol, is a potent activator of PKC [9].
+
+  http://www.jbc.org/content/267/30/21637.full.pdf
+
+  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950301/
+
+  Protein kinase C-regulated cAMP response element-binding protein phosphorylation in cultured rat striatal neurons
