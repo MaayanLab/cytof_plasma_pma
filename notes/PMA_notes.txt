@@ -10,3 +10,12 @@ PMA treatment
   https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950301/
 
   Protein kinase C-regulated cAMP response element-binding protein phosphorylation in cultured rat striatal neurons
+
+
+  S6 <- MTOR signaling
+
+  MAPK signaling
+    ERK phospho is
+
+JAK STAT signaling
+  STAT1 STAT3

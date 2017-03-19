@@ -1,0 +1,44 @@
+IKBa
+  http://www.uniprot.org/uniprot/P25963
+  NF-kappa-B inhibitor alpha
+
+  Inhibits the activity of dimeric NF-kappa-B/REL complexes by trapping REL dimers in the cyttoplasm through masking of their nuclear localization signals. On cellular stimulation by immune and proinflammatory responses, becomes phosphorylated promoting uqiquitination and degrdation, enabling hte dimeric RELA to translocate to the nucleus and activate transcription.
+
+  PTM: Phospohrylated; isables inhibition of NF-kappa-B DNA-binding activty. Phosphorylation at positions 32 and 36 is prerequisite to recognition by UBE2D3 leading to polyubiquitination adn subsequent degredation. l
+
+
+pS6
+  http://www.uniprot.org/uniprot/P62753
+
+  40S ribosomal protein S6. May play an importand role in controlling cell growth and proliferation through the selective translation of particular classes of mRNA. GO Molecular function: protein kinase binding, RNA binding, structural constitutent of ribosome.
+
+  Post-translational modification. Ribosomal protein S6 is the major substrate of protein kinases in the eukaryotic ribosomes. The phosphorylation is stimulated by growh factors, tumor promoting agents, and mitogens. It is dephosphorylated at growth arrest. Phosphorylated ast Ser-235 and Ser-236 by RPS6KA1 and RPS6KA3; phosphorylation at these sites facilitates the assembly of the preinitiation complex.
+
+pERK1 2
+  Serine/threonine kinase which acts as an essential component of the MAP kinase signal transduction pathway. MAPK1/ERK2 and MAPK3/ERK1 are the two MAPKs which play an important role in the MAPK/ERK cascade. They participate also in a signaling cascade initiated by activated IT and KITLG/SCF. Depdending on the cellular contet, the MAPK/ERK cascade mediates diverse biological functions such as cell growth, adhesion, survival and regulation of meiosis, mitosis, and postmitotic functions in differentiated cells by phosphorylating a number of transcription factors. ...
+
+  PTM: Phosphorylated upon KIT and FLT3 signaling. Dually phosphorylated on Thr-202 and Tyr-204, which activates the envzyme. Ligand-activated ALK induces tyrosine phosphorylation. Dephosphorylation by PTPRJ at Tyr-204.
+
+pCREB
+  Cyclic AMP-responsive element-binding protein 1, CREB1. Phosphorylation-dependent transcription factor that stimulates transcription upon binding ot hte DNA cAMP response element (CRE), a sequence present in many viral and cellular promotors. Transcription actvation is enhanced by the TORC coactivators which act independently of Ser-133 phosphorylation. Involved in different cellular processes including hte synchronization of circadian ...
+
+  PTM: Stimulated by phosphorylation. Phosphorylation of both Ser-133 and Ser-142 in the SCN regulates the activity of CREB and participates in circadian rythm generation. Phosphorylation of Ser-133 allows CREBBP binding. In liber, phosphorylation is induced by fasting or glycagon in a circadian fashion. BREBL2 positively regulates phosphorylation at Ser-133 thereby stimulating CREB1 transcriptional activity. Phosphorylation upon calcium influx by CaMK4 and CaMK2 on Ser-133...
+
+
+pPLCg2
+  1-phosphatidylinositol 4,5-biphosphate phosphodiesterase gamma-2
+  The production of hte second messenger molecules diacylglycerol (DAG) and inositol 1,4,5-triphosphate (IP3) is mediated by activated phosphatidylinositol-specific phospholipase C enzymes. It is a crucial enzyme in transmembrane signaling.
+
+  PTM: Phosphorylated on tyrosine residues by CSF1R (by similarity). Phosphorylated on tyrosine residues by BTK and SYK; upon ligand-induced activation of a variety of growth factor receptors and immune system receptors. Phosphorylation leads to increased phospholipase activity.
+
+
+pMAPKAP2
+
+
+pp38
+
+pSTAT3
+
+PSTAT1
+
+pSTAT5
