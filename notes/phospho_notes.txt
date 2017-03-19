@@ -33,12 +33,25 @@ pPLCg2
 
 
 pMAPKAP2
+  MAP kinase-activated protein kinase 2, MAPKAPK2
+  Stress-activated serine/threonine-protein kinase involved in cytokine production, endoctosis, reorganization of the cytoskeleton, cell migration, cell cycle control, chromatin remodeling, DNA damage response and transcriptional regulation. Following stress, it is phosphorylated and activated by MAP kinase p38-alpha/MAPK14, leading to phosphorylation of substrates. Phosphorylates serine in the peptide seq ...
 
 
 pp38
+  Mitogen-activate protein kinase 14, MAPK14
+  Serine/threonine kinase which acts as an essential component of hte MAP kinase signaling transduction pathway. MAPK14 is one of hte four p38 MAPKs which play an important role in the cascades of cellular responses evoked by extracellular stimuli such as proinflammatory cytokines or physical stress leading to direct activation of transcription factors. Accordingly, p38 phosphorylate a broad range of proteisn and it has been estimated thaty they may have approximately 200 to 300 substrates each. ...
+
+  Dually phosphorylated on Thr-180 and Tyr-182 by the MAP2Ks MAP2K3/MKK3, M... in response to inflammatory cytokinase, environmental stress or growth factors, which activates the enzyme. Dual phosphorylation can be mediated by TAB1-mediated autophosphorylation. TCR engagement in T-cells also leads to Tyr-323 phosphorylation by ZAP70. ...
 
 pSTAT3
+  Signal transducer and activator of transcription 3. Signal transducer and trasncription activator that mediates celylar responses to interleukins, KIT/SCCF, LRP and other growht factors. Once activated , recruitscoactivators, such as NCOA1 or MED1, to the promotor region of the target gene. May mediate cellular responses to activates FGFr1, ... Acts as a regulatory of inflammatory response by regulating differentiation of naive CD4+ T-cells into T-helper Th17 or ergulatory T-cells (Treg)...
 
-PSTAT1
+  PTM: Tyrosine phosphorylated upon stimulation with EGF. Tyrosine phosphorylated in responses ot consistutively activated FGFR1, FGFR2, 3 and 4. Activated bthrough tyrosine phosphorylation by BMX. Tyrosine phosphorylated in response to IL6, ...
+
+pSTAT1
+  Signal transducer and activator of transcription 1. Mediates cellular responses to interferons (IFNs), cytokine KITLG/SCF and other cytokinse and other growth factors. Following type I IFN binding to cell surface receptors, signaling via protein kianses leads to activation of Jak kinases (TYK2 and JAK1) and to tyrosine phosphorylation of STAT1 and STAT2. The phoshprylates STATs dimerize and associate with ISGF3G/IRF-9 to form a complex termed ISGF3 TF, that enters the nuleus. ...
+
+  PTM: Phosphorylated on tyrosine and serine resideues in response to a variety of cytokinse/growth hormones incluiding IFN-alpha, IFN-gamma, PDGF and EGF. Activated KIT promotes phosphorylation on tyrosine residues and subsequent translocation to the nucleus. ...
+
 
 pSTAT5
