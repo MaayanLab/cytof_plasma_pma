@@ -43,3 +43,25 @@ PMA treatment Cell Type
   ===========
 
 
+
+net.set_cat_color('row', 2, 'Majority-Category: B cells', '#22316C')
+net.set_cat_color('row', 2, 'Majority-Category: Basophils', '#000033')
+net.set_cat_color('row', 2, 'Majority-Category: CD14hi monocytes', 'yellow')
+net.set_cat_color('row', 2, 'Majority-Category: CD14low monocytes', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: CD1c DCs', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: CD4 Tcells', 'blue')
+net.set_cat_color('row', 2, 'Majority-Category: CD4 Tcells_CD127hi', '#FF6347')
+net.set_cat_color('row', 2, 'Majority-Category: CD4 Tcells CD161hi', '#F87531')
+net.set_cat_color('row', 2, 'Majority-Category: CD4 Tcells_Tregs', '#8B4513')
+net.set_cat_color('row', 2, 'Majority-Category: CD4 Tcells+CD27hi', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: CD8 Tcells', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: Neutrophils', 'purple')
+net.set_cat_color('row', 2, 'Majority-Category: NK cells_CD16hi', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: NK cells_CD16hi_CD57hi', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: NK cells_CD56hi', '#5A6351')
+net.set_cat_color('row', 2, 'Majority-Category: Undefined', 'gray')
+
+
+Manual Notes about Cell Types and Phoshorylations
+--------------------------------------------------
+CD8T cells -> IkBA
