@@ -17,5 +17,11 @@ PMA treatment
   MAPK signaling
     ERK phospho is
 
+  Wiki
+  ----
+  "12-O-Tetradecanoylphorbol-13-acetate (TPA), also commonly known as tetradecanoylphorbol acetate, tetradecanoyl phorbol acetate, and phorbol 12-myristate 13-acetate (PMA)"
+
+  Is a diester of phorbol and a potent tumor promoter ... used to activate the signal tranduction enzyme protein kinase C (PKC).
+
 JAK STAT signaling
   STAT1 STAT3
