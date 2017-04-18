@@ -25,3 +25,21 @@ PMA treatment
 
 JAK STAT signaling
   STAT1 STAT3
+
+PMA treatment Cell Type
+-----------------------
+  There is a small cluster composed mainly of CD14hi monocytes and CD4 T cells with high phosphorylation levels of:
+    pMAPKAP2
+    pCREB
+    pp38
+    pERK12
+
+  CD14hi monocytes
+  ================
+
+
+
+  CD4 T cells
+  ===========
+
+
