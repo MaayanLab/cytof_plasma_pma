@@ -44,14 +44,14 @@ d3.json('PMA_cell_type_results.json', function(data){
   d3.select('#container-id-1 h1')
    .remove();
 
-  var svg_height = 500;
-  var svg_width = 500;
+  var svg_height = 1000;
+  var svg_width = 1000;
   var bar_width = 180;
   var bar_height = 20;
-  var bar_offset = 23;
+  var bar_offset = 46;
   var title_height = 27;
   var top_margin = 30;
-  var left_margin = 10;
+  var left_margin = 30;
 
   var main_svg = d3.select('#container-id-1')
     .append('svg')
@@ -64,8 +64,7 @@ d3.json('PMA_cell_type_results.json', function(data){
     .classed('background', true)
     .attr('height', svg_height + 'px')
     .attr('width', svg_height + 'px')
-    .attr('fill', 'blue')
-    .attr('opacity', 0.3);
+    .attr('fill', 'white');
 
   // loop through data
   var max_bar_value = cell_data[0].sorting_mean;
@@ -73,10 +72,6 @@ d3.json('PMA_cell_type_results.json', function(data){
   var bar_scale = d3.scale.linear()
                     .domain([0, max_bar_value])
                     .range([0, bar_width]);
-
-  // _.each(cell_data, function(inst_data){
-  //   console.log(inst_data.sorting_mean);
-  // });
 
   var bar_graph_container = main_svg
     .append('g')
@@ -89,11 +84,31 @@ d3.json('PMA_cell_type_results.json', function(data){
     .enter()
     .append('g')
     .attr('transform', function(d,i){
-      var inst_y = i * bar_offset;
+      var inst_y = i * bar_offset * 1.05;
       return 'translate(0, ' + inst_y + ')';
+    });
+
+  bar_groups
+    .append('rect')
+    .attr('height', bar_height+'px')
+    .attr('width', function(d){
+      var inst_width = bar_scale(d.plasma_mean);
+      return inst_width;
     })
-    .append('text')
-    .text('something')
+    .attr('fill', 'red')
+    .attr('opacity', 0.3)
+
+  bar_groups
+    .append('rect')
+    .attr('height', bar_height+'px')
+    .attr('width', function(d){
+      var inst_width = bar_scale(d.pma_mean);
+      return inst_width;
+    })
+    .attr('fill', 'blue')
+    .attr('opacity', 0.3)
+    .attr('transform', 'translate(0,'+ bar_offset/2 +')')
+
 
 
 });
