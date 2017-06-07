@@ -46,12 +46,14 @@ d3.json('PMA_cell_type_results.json', function(data){
 
   var svg_height = 1000;
   var svg_width = 1000;
-  var bar_width = 180;
+  var bar_width = 500;
   var bar_height = 20;
   var bar_offset = 46;
   var title_height = 27;
   var top_margin = 30;
   var left_margin = 30;
+  var plasma_label_offset = 16;
+  var pma_label_offset = 39;
 
   var main_svg = d3.select('#container-id-1')
     .append('svg')
@@ -84,10 +86,11 @@ d3.json('PMA_cell_type_results.json', function(data){
     .enter()
     .append('g')
     .attr('transform', function(d,i){
-      var inst_y = i * bar_offset * 1.05;
+      var inst_y = i * bar_offset * 1.1;
       return 'translate(0, ' + inst_y + ')';
     });
 
+  // make bars
   bar_groups
     .append('rect')
     .attr('height', bar_height+'px')
@@ -109,6 +112,26 @@ d3.json('PMA_cell_type_results.json', function(data){
     .attr('opacity', 0.3)
     .attr('transform', 'translate(0,'+ bar_offset/2 +')')
 
+  // make bar labels
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return d.name + ' + Plasma';
+    })
+    .attr('transform', 'translate(5,'+ plasma_label_offset +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'right');
+
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return d.name + ' + PMA';
+    })
+    .attr('transform', 'translate(5,'+ pma_label_offset +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'right');
 
 
 });
