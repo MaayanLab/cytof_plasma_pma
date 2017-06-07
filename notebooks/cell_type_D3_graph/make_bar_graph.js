@@ -34,10 +34,9 @@ d3.json('PMA_cell_type_results.json', function(data){
 
   });
 
-
+  // sorted cell data based on most common cell-types
   cell_data = _.sortBy(cell_data, 'sorting_mean').reverse();
 
-  console.log(cell_data);
 
   // make bar graph
   ////////////////////
@@ -47,6 +46,12 @@ d3.json('PMA_cell_type_results.json', function(data){
 
   var svg_height = 500;
   var svg_width = 500;
+  var bar_width = 180;
+  var bar_height = 20;
+  var bar_offset = 23;
+  var title_height = 27;
+  var top_margin = 30;
+  var left_margin = 10;
 
   var main_svg = d3.select('#container-id-1')
     .append('svg')
@@ -61,5 +66,34 @@ d3.json('PMA_cell_type_results.json', function(data){
     .attr('width', svg_height + 'px')
     .attr('fill', 'blue')
     .attr('opacity', 0.3);
+
+  // loop through data
+  var max_bar_value = cell_data[0].sorting_mean;
+
+  var bar_scale = d3.scale.linear()
+                    .domain([0, max_bar_value])
+                    .range([0, bar_width]);
+
+  // _.each(cell_data, function(inst_data){
+  //   console.log(inst_data.sorting_mean);
+  // });
+
+  var bar_graph_container = main_svg
+    .append('g')
+    .attr('transform','translate('+ left_margin +', '+ top_margin +')')
+
+  // make bar groups
+  var bar_groups = bar_graph_container
+    .selectAll('g')
+    .data(cell_data)
+    .enter()
+    .append('g')
+    .attr('transform', function(d,i){
+      var inst_y = i * bar_offset;
+      return 'translate(0, ' + inst_y + ')';
+    })
+    .append('text')
+    .text('something')
+
 
 });
