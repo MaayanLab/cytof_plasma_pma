@@ -6,12 +6,15 @@ var svg_width = 1000;
 
 var colorbar_width = 200;
 var colorbar_height = 20;
+var low_left_margin = 10;
+var low_top_margin = 50
+var high_left_margin = 210;
+var high_top_margin = 50
 
 var main_svg = d3.select('#container-id-1')
   .append('svg')
   .attr('height', svg_height + 'px')
   .attr('width', svg_height + 'px');
-
 
 
 //Append a defs (for definition) element to your SVG
@@ -46,3 +49,26 @@ main_svg
   .attr('width', colorbar_width + 'px')
   .attr('fill', 'url(#linear-gradient)')
   .attr('transform', 'translate(10, 10)');
+
+// make title
+///////////////
+
+var max_abs_val = 1000
+
+main_svg
+  .append('text')
+  .text('-' + max_abs_val.toLocaleString())
+  .style('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+  .style('font-weight',  800)
+  .style('font-size', 15)
+  .attr('transform', 'translate('+low_left_margin+','+low_top_margin+')')
+  .attr('text-anchor', 'start');
+
+main_svg
+  .append('text')
+  .text(max_abs_val.toLocaleString())
+  .style('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+  .style('font-weight',  800)
+  .style('font-size', 15)
+  .attr('transform', 'translate('+high_left_margin+','+high_top_margin+')')
+  .attr('text-anchor', 'end');
