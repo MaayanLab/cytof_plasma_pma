@@ -55,8 +55,10 @@ d3.json('PMA_cell_type_results.json', function(data){
   var title_margin_left = 30;
   var pct_offset = 57;
   var std_offset = 110;
+  var pval_offset = 160;
   var pct_num_offset = 333;
   var std_num_offset = 385;
+  var pval_num_offset = 447;
   var offset_pma_nums = 37;
 
   var main_svg = d3.select('#container-id-1')
@@ -110,6 +112,18 @@ d3.json('PMA_cell_type_results.json', function(data){
     .text('Std.')
     .attr('transform', function(){
       var inst_x = bar_width + std_offset;
+      var inst_y = title_margin_top;
+      return 'translate(' + inst_x + ',' + inst_y + ')';
+    })
+    .style('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .style('font-weight',  800)
+    .style('font-size', 18);
+
+  main_svg
+    .append('text')
+    .text('P-val')
+    .attr('transform', function(){
+      var inst_x = bar_width + pval_offset;
       var inst_y = title_margin_top;
       return 'translate(' + inst_x + ',' + inst_y + ')';
     })
@@ -236,6 +250,16 @@ d3.json('PMA_cell_type_results.json', function(data){
       return Math.round(d.plasma_std * 10)/10;
     })
     .attr('transform', 'translate('+std_num_offset+','+ plasma_label_offset +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'end')
+
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return Math.round(d.ttest_pval * 100)/100;
+    })
+    .attr('transform', 'translate('+pval_num_offset+','+ plasma_label_offset +')')
     .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
     .attr('font-weight', 400)
     .attr('text-anchor', 'end')
