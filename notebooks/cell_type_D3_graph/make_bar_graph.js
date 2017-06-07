@@ -49,10 +49,15 @@ d3.json('PMA_cell_type_results.json', function(data){
   var title_height = 27;
   var top_margin = 30;
   var left_margin = 30;
-  var plasma_label_offset = 16;
+  var plasma_label_offset = 17;
   var pma_label_offset = 39;
   var title_margin_top = 15;
   var title_margin_left = 30;
+  var pct_offset = 57;
+  var std_offset = 110;
+  var pct_num_offset = 333;
+  var std_num_offset = 385;
+  var offset_pma_nums = 37;
 
   var main_svg = d3.select('#container-id-1')
     .append('svg')
@@ -88,6 +93,29 @@ d3.json('PMA_cell_type_results.json', function(data){
     .attr('stroke-width', 1)
     .attr('transform', 'translate('+title_margin_left+','+title_margin_top+')');
 
+  main_svg
+    .append('text')
+    .text('Pct.')
+    .attr('transform', function(){
+      var inst_x = bar_width + pct_offset;
+      var inst_y = title_margin_top;
+      return 'translate(' + inst_x + ',' + inst_y + ')';
+    })
+    .style('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .style('font-weight',  800)
+    .style('font-size', 18);
+
+  main_svg
+    .append('text')
+    .text('Std.')
+    .attr('transform', function(){
+      var inst_x = bar_width + std_offset;
+      var inst_y = title_margin_top;
+      return 'translate(' + inst_x + ',' + inst_y + ')';
+    })
+    .style('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .style('font-weight',  800)
+    .style('font-size', 18);
 
   // make bar graph
   ////////////////////
@@ -114,10 +142,6 @@ d3.json('PMA_cell_type_results.json', function(data){
 
   d3.select('#container-id-1 h1')
    .remove();
-
-
-
-
 
   // loop through data
   var max_bar_value = cell_data[0].sorting_mean;
@@ -192,5 +216,49 @@ d3.json('PMA_cell_type_results.json', function(data){
     .attr('font-weight', 400)
     .attr('text-anchor', 'right');
 
+  // make data column
+  /////////////////////
+
+  // Plasma
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return Math.round(d.plasma_mean * 10)/10
+    })
+    .attr('transform', 'translate('+pct_num_offset+','+ plasma_label_offset +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'end')
+
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return Math.round(d.plasma_std * 10)/10;
+    })
+    .attr('transform', 'translate('+std_num_offset+','+ plasma_label_offset +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'end')
+
+  // Plasma
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return Math.round(d.pma_mean * 10)/10
+    })
+    .attr('transform', 'translate('+pct_num_offset+','+ offset_pma_nums +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'end')
+
+  bar_groups
+    .append('text')
+    .text(function(d){
+      return Math.round(d.pma_std * 10)/10;
+    })
+    .attr('transform', 'translate('+std_num_offset+','+ offset_pma_nums +')')
+    .attr('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .attr('font-weight', 400)
+    .attr('text-anchor', 'end')
 
 });
