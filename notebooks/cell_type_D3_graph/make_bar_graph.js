@@ -37,6 +37,26 @@ d3.json('PMA_cell_type_results.json', function(data){
   // sorted cell data based on most common cell-types
   cell_data = _.sortBy(cell_data, 'sorting_mean').reverse();
 
+  // cell-type colors
+  ct_colors = {};
+  ct_colors['B cells'] = '#22316C';
+  ct_colors['Basophils'] = '#000033';
+  ct_colors['CD14hi monocytes'] = 'yellow';
+  ct_colors['CD14low monocytes'] = '#93b8bf';
+  ct_colors['CD1c DCs'] = '#3636e2';
+  ct_colors['CD4 Tcells'] = 'blue';
+  ct_colors['CD4 Tcells_CD127hi'] = '#FF6347';
+  ct_colors['CD4 Tcells CD161hi'] = '#F87531';
+  ct_colors['CD4 Tcells_Tregs'] = '#8B4513';
+  ct_colors['CD4 Tcells+CD27hi'] = '#330303';
+  ct_colors['CD8 Tcells'] = '#ffb247';
+  ct_colors['Neutrophils'] = 'purple';
+  ct_colors['NK cells_CD16hi'] = 'red';
+  ct_colors['NK cells_CD16hi_CD57hi'] = 'orange';
+  ct_colors['NK cells_CD56hi'] = '#e052e5';
+  ct_colors['Undefined'] = 'gray';
+
+  cat_color_opacity = 0.6;
 
   // make bar graph
   ////////////////////
@@ -46,7 +66,7 @@ d3.json('PMA_cell_type_results.json', function(data){
 
   var svg_height = 1000;
   var svg_width = 1000;
-  var bar_width = 500;
+  var bar_width = 300;
   var bar_height = 20;
   var bar_offset = 46;
   var title_height = 27;
@@ -98,8 +118,12 @@ d3.json('PMA_cell_type_results.json', function(data){
       var inst_width = bar_scale(d.plasma_mean);
       return inst_width;
     })
-    .attr('fill', 'red')
-    .attr('opacity', 0.3)
+    .attr('opacity', cat_color_opacity)
+    .attr('fill', function(d){
+      return ct_colors[d.name];
+    })
+    .attr('stroke', 'grey')
+    .attr('stroke-width', '0.5px');
 
   bar_groups
     .append('rect')
@@ -108,8 +132,12 @@ d3.json('PMA_cell_type_results.json', function(data){
       var inst_width = bar_scale(d.pma_mean);
       return inst_width;
     })
-    .attr('fill', 'blue')
-    .attr('opacity', 0.3)
+    .attr('fill', function(d){
+      return ct_colors[d.name];
+    })
+    .attr('opacity', cat_color_opacity)
+    .attr('stroke', 'grey')
+    .attr('stroke-width', '0.5px')
     .attr('transform', 'translate(0,'+ bar_offset/2 +')')
 
   // make bar labels
