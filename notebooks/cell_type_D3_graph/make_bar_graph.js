@@ -37,6 +37,61 @@ d3.json('PMA_cell_type_results.json', function(data){
   // sorted cell data based on most common cell-types
   cell_data = _.sortBy(cell_data, 'sorting_mean').reverse();
 
+
+  // make svg
+  //////////////////
+  var cat_color_opacity = 0.6;
+  var svg_height = 1000;
+  var svg_width = 1000;
+  var bar_width = 275;
+  var bar_height = 20;
+  var bar_offset = 46;
+  var title_height = 27;
+  var top_margin = 30;
+  var left_margin = 30;
+  var plasma_label_offset = 16;
+  var pma_label_offset = 39;
+  var title_margin_top = 15;
+  var title_margin_left = 30;
+
+  var main_svg = d3.select('#container-id-1')
+    .append('svg')
+    .attr('height', svg_height + 'px')
+    .attr('width', svg_height + 'px');
+
+  // make background
+  main_svg
+    .append('rect')
+    .classed('background', true)
+    .attr('height', svg_height + 'px')
+    .attr('width', svg_height + 'px')
+    .attr('fill', 'white');
+
+  // make title
+  ///////////////
+  main_svg
+    .append('text')
+    .text('Cell Types')
+    .style('font-family', '"Helvetica Neue", Helvetica, Arial, sans-serif')
+    .style('font-weight',  800)
+    .style('font-size', 18)
+    .attr('transform', 'translate('+title_margin_left+','+title_margin_top+')');
+
+  var line_y = 7;
+  main_svg
+    .append('line')
+    .attr('x1', 0)
+    .attr('x2', bar_width)
+    .attr('y1', line_y)
+    .attr('y2', line_y)
+    .attr('stroke', 'blue')
+    .attr('stroke-width', 1)
+    .attr('transform', 'translate('+title_margin_left+','+title_margin_top+')');
+
+
+  // make bar graph
+  ////////////////////
+
   // cell-type colors
   ct_colors = {};
   ct_colors['B cells'] = '#22316C';
@@ -56,37 +111,13 @@ d3.json('PMA_cell_type_results.json', function(data){
   ct_colors['NK cells_CD56hi'] = '#e052e5';
   ct_colors['Undefined'] = 'gray';
 
-  cat_color_opacity = 0.6;
-
-  // make bar graph
-  ////////////////////
 
   d3.select('#container-id-1 h1')
    .remove();
 
-  var svg_height = 1000;
-  var svg_width = 1000;
-  var bar_width = 300;
-  var bar_height = 20;
-  var bar_offset = 46;
-  var title_height = 27;
-  var top_margin = 30;
-  var left_margin = 30;
-  var plasma_label_offset = 16;
-  var pma_label_offset = 39;
 
-  var main_svg = d3.select('#container-id-1')
-    .append('svg')
-    .attr('height', svg_height + 'px')
-    .attr('width', svg_height + 'px');
 
-  // make background
-  main_svg
-    .append('rect')
-    .classed('background', true)
-    .attr('height', svg_height + 'px')
-    .attr('width', svg_height + 'px')
-    .attr('fill', 'white');
+
 
   // loop through data
   var max_bar_value = cell_data[0].sorting_mean;
